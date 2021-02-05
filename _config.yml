@@ -1,7 +1,7 @@
-site_name: 杭州市疾控中心测序实验室
-site_description: '杭州市疾控中心测序实验室'
-site_author: 'indexofire'
-site_url: 'https://indexofire.github.io/pathongs/'
+site_name: 微生物组学
+site_description: '微生物组学'
+site_author: 'xanadu314'
+site_url: 'https://xanadu314.github.io/pathongs/'
 theme:
   name: 'material'
   palette:
