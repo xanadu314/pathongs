@@ -10,7 +10,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
-  custom_dir: overrides
+  #custom_dir: overrides
 copyright: 'Copyright &copy; 2016 - 2021 HZCDC@Lab'
 repo_url: https://github.com/indexofire/pathongs/
 
