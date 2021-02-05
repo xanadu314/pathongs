@@ -196,3 +196,5 @@ plugins:
   - git-authors
   - git-revision-date
   - macros
+
+theme: jekyll-theme-time-machine
