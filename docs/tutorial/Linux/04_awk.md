@@ -1,6 +1,6 @@
 # 用 awk 处理 NGS 数据
 
-{{ git_page_authors }} 更新于: {{ git_revision_date }}
+
 
 ---
 
@@ -73,9 +73,9 @@ awk 程序主体主要包括 pattern，action和input file：
     ```bash
     $ awk 'pattern { action }' input_file
     ```
-
+    
     也可以写成awk程序来运行。一个 awk 程序往往如下所示：
-
+    
     ```awk
     #!/usr/bin/awk -f
     pattern { action }

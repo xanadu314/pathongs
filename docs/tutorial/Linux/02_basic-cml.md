@@ -1,6 +1,6 @@
 # Linux 基本命令
 
-{{ git_page_authors }} 更新于: {{ git_revision_date }}
+
 
 ![Linux基本命令](../assets/images/C01/01/banner.jpg)
 
@@ -173,7 +173,7 @@ $ top
 !!! info "进程列表"
 
     ps会在终端打印系统进程，各列的含义是:
-
+    
     * USER: 运行该进程的用户
     * PID: 运行着的命令(CMD)的进程编号
     * %CPU: CPU占用

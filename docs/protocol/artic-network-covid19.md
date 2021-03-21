@@ -1,6 +1,6 @@
 # ARTIC纳米孔新型冠状病毒基因组测序方案
 
-{{ git_page_authors }} 更新于: {{ git_revision_date }}
+
 
 ---
 

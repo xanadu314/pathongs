@@ -1,7 +1,7 @@
-site_name: 杭州市疾控中心测序实验室
-site_description: '杭州市疾控中心测序实验室'
-site_author: 'indexofire'
-site_url: 'https://indexofire.github.io/pathongs/'
+site_name: HYX's Bioinformatics 
+site_description: '多组学联合分析'
+site_author: 'xanadu314'
+site_url: 'https://xanadu314.github.io/pathongs/'
 theme:
   name: 'material'
   palette:
@@ -10,7 +10,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
-  #custom_dir: overrides
+  #custom_dir: sources
 copyright: 'Copyright &copy; 2016 - 2021 HZCDC@Lab'
 repo_url: https://github.com/indexofire/pathongs/
 
@@ -153,6 +153,11 @@ nav:
   - '实验手册':
     - '': protocol.md
     - 'ArticNetwork Covid-19测序': protocol/artic-network-covid19.md
+  - '生信笔记':
+    - '01 TEST': blog/my-vim-ide.md
+    - '02 blast2SRA': blog/blast2sra.md
+    - '03 Rmarkdown': blog/tes.md
+    - '04 SPAdes': blog/test0316.md
   - '关于我们':
     - '': about.md
 use_directory_urls: true
@@ -188,13 +193,17 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.superfences
   - pymdownx.progressbar
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 google_analytics: ['UA-55420348-3', 'auto']
 
 plugins:
   - search
-  - git-authors
-  - git-revision-date
-  - macros
-
-theme: jekyll-theme-time-machine
+#  - git-authors
+#  - git-revision-date
+#  - macros
