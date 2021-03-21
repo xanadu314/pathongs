@@ -1,5 +1,7 @@
 site_name: HYX's Bioinformatics 
 site_description: '多组学联合分析'
+# site_name: 微生物组学
+# site_description: '微生物组学'
 site_author: 'xanadu314'
 site_url: 'https://xanadu314.github.io/pathongs/'
 theme:
@@ -177,7 +179,8 @@ markdown_extensions:
   - meta
   - toc:
       permalink: true
-  - pymdownx.arithmatex
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
