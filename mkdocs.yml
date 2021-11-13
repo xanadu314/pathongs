@@ -160,6 +160,9 @@ nav:
     - '02 blast2SRA': blog/blast2sra.md
     - '03 Rmarkdown': blog/tes.md
     - '04 SPAdes': blog/test0316.md
+    - '05 KEGG注释': blog/KEGG.md
+    - '06 SourceSink分析': blog/SourceSink.md
+    - '07 小鼠转录组分析模板': blog/tes2.md
   - '关于我们':
     - '': about.md
 use_directory_urls: true

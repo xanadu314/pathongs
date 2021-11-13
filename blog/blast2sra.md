@@ -39,8 +39,10 @@ SRA数据库通常与GEO数据库相关联，可以通过GEO![GEO](https://www.n
 
 输入需要比对的基因序列，下面选择SRA数据库，再输入SRX编号，根据提示填充所需要的信息。
 
-![blast2sra](/assets/images/blog/blast2sra.png)
+![blast2sra](../assets/images/blog/blast2sra.png)
+
+
 
 点BLAST即可获得比对结果。比对到的数量近似反映出测序测到的reads数目。
 
-![results](//assets/images/blog/results.png)
+![results](../assets/images/blog/results.png)
