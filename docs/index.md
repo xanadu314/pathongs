@@ -28,7 +28,7 @@
 
 一群来自世界各地、有梦想的bioer
 
-![](/Users/hyx/Documents/Documents - Yuxuan’s MacBook Air/github/pathongs/assets/images/blog/logo3.png)
+![](assets/images/blog/logo3.png)
 
 
 ---
