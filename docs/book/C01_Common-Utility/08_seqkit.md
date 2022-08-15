@@ -8,40 +8,45 @@
 
 ## 使用
 
-| 子命令 | 用途 |
-| ------ | ---- |
-| common | find common sequences of multiple files by id/name/sequence |
-| concat | concatenate sequences with same ID from multiple files |
-| convert | convert FASTQ quality encoding between Sanger, Solexa and Illumina |
-| duplicate | duplicate sequences N times |
-| faidx | create FASTA index file and extract subsequence |
-| fq2fa | convert FASTQ to FASTA |
-| fx2tab | convert FASTA/Q to tabular format (with length/GC content/GC skew) |
-| genautocomplete | generate shell autocompletion script |
-| grep | search sequences by ID/name/sequence/sequence motifs, mismatch allowed |
-| head | print first N FASTA/Q records |
-| help | Help about any command |
-| locate | locate subsequences/motifs, mismatch allowed |
-| mutate | edit sequence (point mutation, insertion, deletion) |
-| range |  print FASTA/Q records in a range (start:end) |
-| rename | rename duplicated IDs |
-| replace | replace name/sequence by regular expression |
-| restart | reset start position for circular genome |
-| rmdup |  remove duplicated sequences by id/name/sequence |
-| sample | sample sequences by number or proportion |
-| seq | transform sequences (revserse, complement, extract ID...) |
-| shuffle | shuffle sequences |
-| sliding | sliding sequences, circular genome supported |
-| sort | sort sequences by id/name/sequence/length |
-| split | split sequences into files by id/seq region/size/parts (mainly for FASTA) |
-| split2 | split sequences into files by size/parts (FASTA, PE/SE FASTQ) |
-| stats |  simple statistics of FASTA/Q files |
-| subseq | get subsequences by region/gtf/bed, including flanking sequences |
-| tab2fx | convert tabular format to FASTA/Q format |
-| translate |  translate DNA/RNA to protein sequence |
-| version |  print version information and check for update |
-
-
+| 命令            | 功能                                                         |
+| --------------- | ------------------------------------------------------------ |
+| amplicon        | 通过引物检索扩增子(或其周围的特定区域)                       |
+| bam             | 检查和在线绘制BAM记录文件的直方图                            |
+| common          | 通过id/名称/序列查找多个文件的公共序列                       |
+| concat          | 连接多个文件中具有相同ID的序列                               |
+| convert         | 转换FASTQ质量编码格式：支持格式包括：桑格，Solexa和Illumina  |
+| duplicate       | 重复序列N次                                                  |
+| faidx           | 创建FASTA索引文件并提取子序列                                |
+| fish            | 使用局部比对在较大的序列中寻找短序列                         |
+| fq2fa           | 转换FASTQ到FASTA                                             |
+| fx2tab          | 将FASTA/Q转换为表格格式(包含长度/GC含量/GC偏好)              |
+| genautocomplete | 生成shell自动完成脚本                                        |
+| grep            | 通过ID/name/sequence/sequence motif搜索序列，允许错配        |
+| head            | 打印第一条序列                                               |
+| help            | 打印帮助信息                                                 |
+| locate          | 定位序列，或者motifs，允许错配                               |
+| mutate          | 编辑序列(点突变、插入、删除)                                 |
+| pair            | 匹配双端序列文件                                             |
+| range           | 打印一个范围内的序列                                         |
+| rename          | 重命名重复序列ID                                             |
+| replace         | 使用正则表达式修改名称或者序列                               |
+| restart         | 重置环状基因组的起始位置                                     |
+| rmdup           | 通过id/名称/序列删除重复的序列                               |
+| sample          | 按数量或比例对序列进行抽样                                   |
+| sana            | 清理损坏的单行fastq文件                                      |
+| scat            | real time recursive concatenation and streaming of fastx files |
+| seq             | 转换序列(反向，补充，提取ID…)                                |
+| shuffle         | 随机序列                                                     |
+| sliding         | 序列滑窗提取，支持环形基因组                                 |
+| sort            | 按id/名称/序列/长度排序序列                                  |
+| split           | 按id/seq区域/大小/部件将序列拆分为文件(主要用于FASTA)        |
+| split2          | 按序列数量/文件数将序列拆分为多个文件(FASTA                  |
+| stats           | FASTA/Q文件的简单统计                                        |
+| subseq          | 通过region/gtf/bed得到子序列，包括侧翼序列                   |
+| tab2fx          | 转换表格格式为FASTA/Q格式                                    |
+| translate       | 翻译DNA/RNA到蛋白质序列(支持歧义碱基)                        |
+| version         | 打印版本信息并检查是否更新                                   |
+| watch           | 序列特征的监测和在线直方图                                   |
 
 ### grep 命令
 
@@ -66,22 +71,20 @@ $ seqkit seq -h
 
 ```
 
-```bash tab="-n和-i"
+```bash
+
+# tab="-n和-i" 
 # 将 reads 的名称信息输出，如果要和 bioawk $name 相同，使用 -i 参数
 $ seqkit seq -n SRR1175124_1.fastq.gz SRR1175124_2.fastq.gz
 SRR1175124.102354 102354 length=150
-...
 $ bioawk -c fastx '{print $name}' SRR1175124_1.fastq.gz SRR1175124_2.fastq.gz
 SRR1175124.102354
-...
 $ seqkit seq -in SRR1175124_1.fastq.gz SRR1175124_2.fastq.gz
 SRR1175124.102354
-...
 
-#
 ```
 
-```bash tab="-l和-u"
+```bash
 # 输出小写碱基
 $ seqkit seq -sl SRR1175124_1.fastq.gz
 # 输出大写碱基
@@ -95,10 +98,11 @@ $ seqkit seq -su SRR1175124_1.fastq.gz
 
 ```bash
 # 下载 NC_001477
-$ efetch -db nuccore -id NC_001477 -format fasta > NC_001477.fasta
+$ pefetch -db nuccore -id NC_001477 -format fasta > NC_001477.fasta
 # 翻译 DNA 序列为氨基酸序列
 $ seqkit translate -j 4 -o NC_001477.pep NC_001477.fasta
-#
+# 统计序列的长度和GC
+$ seqkit fx2tab -l -g -n -i -H test.fa
 ```
 
 !!! note "对注释的多拷贝基因提取序列后进行序列比对"

@@ -13,8 +13,8 @@ theme:
     - navigation.tabs
     - navigation.sections
   #custom_dir: sources
-copyright: 'Copyright &copy; 2016 - 2021 HZCDC@Lab'
-repo_url: https://github.com/indexofire/pathongs/
+copyright: 'Copyright &copy; 2016 - 2021 HZAU@Huang_Lab'
+repo_url: https://xanadu314.github.io/pathongs
 
 extra:
   palette:
