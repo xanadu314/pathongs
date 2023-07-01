@@ -1,3 +1,3 @@
-# Protocol
+# Blog
 
-- [ArticNetwork](artic-network-covid19/)
+- [ArticNetwork]

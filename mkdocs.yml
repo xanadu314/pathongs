@@ -13,7 +13,7 @@ theme:
     - navigation.tabs
     - navigation.sections
   #custom_dir: sources
-copyright: 'Copyright &copy; 2016 - 2022 HZAU@Huang_Lab'
+copyright: 'Copyright &copy; 2016 - 2023 HZAU@Lab'
 repo_url: https://xanadu314.github.io/pathongs
 
 extra:
@@ -152,9 +152,10 @@ nav:
       - '08. vcf': tutorial/Format/08_vcf.md
       - '09. gff': tutorial/Format/09_gff.md
       - '10. cram': tutorial/Format/10_cram.md
-  - '实验手册':
-    - '': protocol.md
-    - 'ArticNetwork Covid-19测序': protocol/artic-network-covid19.md
+  - '博文日志':
+    # - '': protocol.md
+    - 'Article': protocol/artic-network-covid19.md
+    - '答谢博书': protocol/yihuixie.md
   - '生信笔记':
     - '01 TEST': blog/my-vim-ide.md
     - '02 blast2SRA': blog/blast2sra.md
@@ -163,6 +164,7 @@ nav:
     - '05 KEGG注释': blog/KEGG.md
     - '06 SourceSink分析': blog/SourceSink.md
     - '07 小鼠转录组分析模板': blog/tes2.md
+    - '08 真菌基因组': blog/test0316.md
   - '关于我们':
     - '': about.md
 use_directory_urls: true
@@ -209,7 +211,7 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-google_analytics: ['UA-55420348-3', 'auto']
+# google_analytics: ['UA-55420348-3', 'auto']
 
 plugins:
   - search
