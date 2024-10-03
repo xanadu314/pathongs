@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blast2sra-database" class="md-skip">
+        <a href="#mngs" class="md-skip">
           Skip to content
         </a>
       
@@ -2831,23 +2831,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sra" class="md-nav__link">
-    SRA数据库
+  <a href="#_1" class="md-nav__link">
+    测序原理
   </a>
   
-    <nav class="md-nav" aria-label="SRA数据库">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    分析流程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    分析步骤
+  </a>
+  
+    <nav class="md-nav" aria-label="分析步骤">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sra_1" class="md-nav__link">
-    在线访问SRA数据库
+  <a href="#00-qc" class="md-nav__link">
+    00 数据质控QC
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#blast2sra" class="md-nav__link">
-    在线BLAST2SRA
+  <a href="#01" class="md-nav__link">
+    01 去除宿主序列
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02" class="md-nav__link">
+    02组装
   </a>
   
 </li>
@@ -2948,23 +2969,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sra" class="md-nav__link">
-    SRA数据库
+  <a href="#_1" class="md-nav__link">
+    测序原理
   </a>
   
-    <nav class="md-nav" aria-label="SRA数据库">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    分析流程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    分析步骤
+  </a>
+  
+    <nav class="md-nav" aria-label="分析步骤">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sra_1" class="md-nav__link">
-    在线访问SRA数据库
+  <a href="#00-qc" class="md-nav__link">
+    00 数据质控QC
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#blast2sra" class="md-nav__link">
-    在线BLAST2SRA
+  <a href="#01" class="md-nav__link">
+    01 去除宿主序列
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02" class="md-nav__link">
+    02组装
   </a>
   
 </li>
@@ -2989,32 +3031,86 @@
                   
 
 
-<h1 id="blast2sra-database">Blast2SRA database<a class="headerlink" href="#blast2sra-database" title="Permanent link">&para;</a></h1>
-<p><strong>2021.3.5</strong></p>
-<p>The Basic Local Alignment Search Tool (<em>BLAST</em>) finds regions of local similarity between sequences</p>
-<p><img alt="blast" src="https://blast.ncbi.nlm.nih.gov/images/nucleutide-blast-cover.png" /></p>
-<hr />
-<h2 id="sra">SRA数据库<a class="headerlink" href="#sra" title="Permanent link">&para;</a></h2>
-<p>Sequence Read Archive (<em>SRA</em>) 是NIH的高通量测序数据的主要档案，是国际核苷酸序列数据库协作（INSDC）的一部分。其作用是存储包括Illumina、454、IonTorrent、Complete Genomic、PacBio和OxfordNanpores在内的二代测序技术所产生的**原始**序列数据（GEO数据库是经过一定处理的数据）。</p>
-<p>SRA数据库主要包含一下几个数据类型：</p>
+<h1 id="mngs">病原宏基因组测序分析（mNGS)<a class="headerlink" href="#mngs" title="Permanent link">&para;</a></h1>
+<p><strong>2024.10.3</strong></p>
+<h2 id="_1">测序原理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>BGISEQ-50</strong></p>
+<p>BGISEQ-50是一款具有领先水平的高通量基因测序平台，以联合探针锚定聚合技术（cPAS）及改进的DNA纳米球（DNB）为核心技术支撑。采用加载系统集成化设计，制备好的DNB无需测序仪以外的配套设备即可自动化完成样本加载到芯片上。</p>
+<p><img alt="BGISEQ-50" src="https://en.genomics.cn/uploadfiles/2018/11/20181127104428312.jpg" /></p>
+<p>参考视频：<a href="https://www.bilibili.com/video/BV1Y7411Y7qb/">https://www.bilibili.com/video/BV1Y7411Y7qb/</a></p>
+<p><strong>产品特点 PRODUCT FEATURE</strong></p>
 <ul>
-<li>EPR/SPR: studies(研究课题)</li>
-<li>SRS：Experiments(实验方案)</li>
-<li>SRX：Samples(样品信息)</li>
-<li>SRR：Runs(测序产生的reads)</li>
+<li>8 Gb per run </li>
+<li>仅需18小时以内即可完成SE50</li>
+<li>支持SE35和SE50读长 </li>
+<li>支持科研，医学临床，农业等领域的测序应用和数据分析</li>
 </ul>
-<h3 id="sra_1">在线访问SRA数据库<a class="headerlink" href="#sra_1" title="Permanent link">&para;</a></h3>
-<p>SRA数据库通常与GEO数据库相关联，可以通过<a href="https://www.ncbi.nlm.nih.gov/geo/">GEO</a>来访问SRA的相关信息。</p>
-<p><img alt="GEONCBI" src="../../assets/images/blog/GEO.png" /></p>
-<p>点击即可以看到所有的分组信息</p>
-<p><img alt="GEOGROUP" src="../../assets/images/blog/SRA_group.png" /></p>
-<p>我们可以根据分组，记下我们需要的Run编号（SRR开头）或者Experiment编号（SRX开头）</p>
-<h3 id="blast2sra">在线BLAST2SRA<a class="headerlink" href="#blast2sra" title="Permanent link">&para;</a></h3>
-<p>访问NCBI web BLAST页面 <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">https://blast.ncbi.nlm.nih.gov/Blast.cgi</a></p>
-<p>输入需要比对的基因序列，下面选择SRA数据库，再输入SRX编号，根据提示填充所需要的信息。</p>
-<p><img alt="blast2sra" src="../../assets/images/blog/blast2sra.png" /></p>
-<p>点BLAST即可获得比对结果。比对到的数量近似反映出测序测到的reads数目。</p>
-<p><img alt="results" src="../../assets/images/blog/results.png" /></p>
+<p><strong>行业应用</strong></p>
+<ul>
+<li>病原识别</li>
+<li>科研</li>
+<li>农业</li>
+<li>肿瘤筛查</li>
+</ul>
+<p><strong>性能参数 PERFORMANCE PARAMETER</strong></p>
+<p>Q30≥75%（高于Q30的碱基百分比是特定标准文库通过整体运行平均所得）</p>
+<table>
+<thead>
+<tr>
+<th>支持读长</th>
+<th>SE50、SE35</th>
+<th>测序时间</th>
+<th>10.5-15小时</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>有效Reads 数</td>
+<td>160M</td>
+<td>平均数据产量</td>
+<td>5.6-8Gb/Run</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_2">分析流程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>flowchart TD
+    A[Rawdata] --bowtie2去除宿主reads--&gt; B{Cleandata}
+    B -- Kraken2基于reads --&gt; C[细菌丰度表]
+    B -- Spades组装 --&gt; D[Contigs]
+    C --差异分析--&gt; F[Final Results]
+    D --Prodigal注释--&gt; E[基因]
+    E --Salmon定量--&gt; G[基因丰度表]
+    G --&gt;F[Final Results]
+</code></pre></div>
+<p><img alt="workflow" src="https://mermaid.ink/svg/pako:eNpd0E1LAkEYB_CvMszZvXjcQ5C76qFLaLddD0_OuC7NzsjsLBLiJUojQrtW0AtGeJKgQ-IGfRnHl2_RrBqEc5p5-P2ZP08H1wWh2MYNJtr1JkiFTlyfI3MOvQq0CSioIcs6FW0V0rwepOv7Nz35mU9TSYHElnWACh2HUeAZ7W6jBZNARxLOKM_r59l8NthglGnHW6a91fB2Pv3Qs_fV67j2L1NtAaHxMr1cja422vUcwVUYxDvlmKn-mujvC33dWzzdZabklUIODFVonDD1J10jj6UgYQBs8Tle928yW_RMH_34skNFg6rAIsH15GHdH2akvCP7BctZof2_cA5HVEYQErPDTgZ9rJo0oj62zZXQBhjnY593DYVEieo5r2NbyYTmsBRJ0MR2A1hsXknLrJC6IQQSoi3p_gKJiqRx" /></p>
+<h2 id="_3">分析步骤<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="00-qc">00 数据质控QC<a class="headerlink" href="#00-qc" title="Permanent link">&para;</a></h3>
+<ul>
+<li>fastp 自动去除低质量序列</li>
+<li>multiQC 合并QC报告</li>
+</ul>
+<h3 id="01">01 去除宿主序列<a class="headerlink" href="#01" title="Permanent link">&para;</a></h3>
+<ul>
+<li>bowtie2 比对人类基因组序列，保留不能比对上的序列（认为是微生物序列）</li>
+</ul>
+<div class="highlight"><pre><span></span><code>bowtie2<span class="w"> </span>-q<span class="w"> </span>--very-sensitive-local<span class="w"> </span>-x<span class="w"> </span>/pub/genomes/hg38/index/bowtie2/hg38.fa<span class="w"> </span>-p<span class="w"> </span><span class="m">24</span><span class="w"> </span>-U<span class="w"> </span>V350042627_L03_5.fq.gz<span class="w"> </span>--un-gz<span class="w">  </span>./cleandata/V350042627_L03_5.unmap.fq.gz<span class="w"> </span>&gt;/dev/null<span class="w">  </span><span class="m">2</span>&gt;./cleandata/V350042627_L03_5.mappingrate.txt
+<span class="c1"># -q代表格式是fastq</span>
+<span class="c1"># --very-sensitive-local 代表严格比对</span>
+<span class="c1"># -x代表基因组index</span>
+<span class="c1"># -p代表线程数</span>
+<span class="c1"># -U代表是单端测序</span>
+<span class="c1"># --un-gz代表输出单端位比对的序列并且压缩</span>
+<span class="c1"># 2&gt;把日志信息输出到./cleandata/V350042627_L03_5.mappingrate.txt</span>
+<span class="c1"># 写一个循环</span>
+<span class="c1"># 生成样品列表</span>
+ls<span class="w"> </span>*.gz<span class="p">|</span>cut<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;.&quot;</span><span class="w"> </span>-f1<span class="w"> </span>&gt;<span class="w"> </span>id.txt<span class="w"> </span><span class="c1"># 列出所有.gz结尾的文件，并且按照“.”分割，取第一列，把结果赋予id.txt这个文件</span>
+<span class="c1"># 通过id.txt写循环</span>
+<span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>id<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;bowtie2 -q --very-sensitive-local -x /pub/genomes/hg38/index/bowtie2/hg38.fa -p 24 -U </span><span class="si">${</span><span class="nv">id</span><span class="si">}</span><span class="s2">.fq.gz --un-gz </span>
+<span class="s2"> ./cleandata/</span><span class="si">${</span><span class="nv">id</span><span class="si">}</span><span class="s2">.unmap.fq.gz  &gt;/dev/null  2&gt;./cleandata/</span><span class="si">${</span><span class="nv">id</span><span class="si">}</span><span class="s2">.mappingrate.txt&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>&lt;id.txt
+<span class="c1"># 读取每行，用id代替每行的内容，输出文字“bowtie2 -q --very-sensitive-local -x /pub/genomes/hg38/index/bowtie2/hg38.fa -p 24 -U ${id}.fq.gz --un-gz ./cleandata/${id}.unmap.fq.gz  &gt;/dev/null  2&gt;./cleandata/${id}.mappingrate.txt”</span>
+</code></pre></div>
+<h3 id="02">02组装<a class="headerlink" href="#02" title="Permanent link">&para;</a></h3>
 
 
 
