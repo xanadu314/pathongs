@@ -2868,7 +2868,14 @@
         
           <li class="md-nav__item">
   <a href="#02" class="md-nav__link">
-    02组装
+    02 组装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03" class="md-nav__link">
+    03 注释
   </a>
   
 </li>
@@ -3006,7 +3013,14 @@
         
           <li class="md-nav__item">
   <a href="#02" class="md-nav__link">
-    02组装
+    02 组装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03" class="md-nav__link">
+    03 注释
   </a>
   
 </li>
@@ -3110,7 +3124,22 @@ ls<span class="w"> </span>*.gz<span class="p">|</span>cut<span class="w"> </span
 <span class="s2"> ./cleandata/</span><span class="si">${</span><span class="nv">id</span><span class="si">}</span><span class="s2">.unmap.fq.gz  &gt;/dev/null  2&gt;./cleandata/</span><span class="si">${</span><span class="nv">id</span><span class="si">}</span><span class="s2">.mappingrate.txt&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>&lt;id.txt
 <span class="c1"># 读取每行，用id代替每行的内容，输出文字“bowtie2 -q --very-sensitive-local -x /pub/genomes/hg38/index/bowtie2/hg38.fa -p 24 -U ${id}.fq.gz --un-gz ./cleandata/${id}.unmap.fq.gz  &gt;/dev/null  2&gt;./cleandata/${id}.mappingrate.txt”</span>
 </code></pre></div>
-<h3 id="02">02组装<a class="headerlink" href="#02" title="Permanent link">&para;</a></h3>
+<h3 id="02">02 组装<a class="headerlink" href="#02" title="Permanent link">&para;</a></h3>
+<ul>
+<li>spades 组装微生物基因组，把reads组装成contigs用于后续注释</li>
+</ul>
+<div class="highlight"><pre><span></span><code>spades.py<span class="w"> </span>--s1<span class="w"> </span>test.fq.gz<span class="w">  </span>-m<span class="w"> </span><span class="m">110</span><span class="w"> </span>-o<span class="w"> </span>multi_metaspades<span class="w"> </span>--only-assembler<span class="w"> </span>-t<span class="w"> </span><span class="m">24</span>
+<span class="c1"># --s1 单端测序</span>
+<span class="c1"># -m 内存最大占用（G）</span>
+<span class="c1"># -o 输出目录</span>
+<span class="c1"># --only-assembler 仅组装</span>
+<span class="c1"># -t 线程数</span>
+</code></pre></div>
+<h3 id="03">03 注释<a class="headerlink" href="#03" title="Permanent link">&para;</a></h3>
+<p>为加快速度，这里只做基因结构注释，基因功能注释用其他方法</p>
+<ul>
+<li>prodigal 用于原核生物的基因结构注释</li>
+</ul>
 
 
 
