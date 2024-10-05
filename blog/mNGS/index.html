@@ -2880,6 +2880,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#04" class="md-nav__link">
+    04 去重
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05" class="md-nav__link">
+    05 基因功能注释
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3025,6 +3039,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#04" class="md-nav__link">
+    04 去重
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05" class="md-nav__link">
+    05 基因功能注释
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3139,6 +3167,32 @@ ls<span class="w"> </span>*.gz<span class="p">|</span>cut<span class="w"> </span
 <p>为加快速度，这里只做基因结构注释，基因功能注释用其他方法</p>
 <ul>
 <li>prodigal 用于原核生物的基因结构注释</li>
+</ul>
+<div class="highlight"><pre><span></span><code>prodigal<span class="w"> </span>-i<span class="w"> </span>all_406.fasta<span class="w"> </span>-o<span class="w"> </span>all_406.genes<span class="w"> </span>-a<span class="w"> </span>all_406.proteins.faa<span class="w"> </span>-d<span class="w"> </span>all_406.cds.fna<span class="w"> </span>-f<span class="w"> </span>gff<span class="w"> </span>-p<span class="w"> </span>meta
+<span class="c1"># -i 输入核酸序列</span>
+<span class="c1"># -o 输出文件名</span>
+<span class="c1"># -a 输出蛋白序列</span>
+<span class="c1"># -d 输出mRNA序列</span>
+<span class="c1"># -f 输出格式</span>
+<span class="c1"># -p 运行模式</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;prodigal -i all_406.fasta -o all_406.genes -a all_406.proteins.faa -d all_406.cds.fna -f gff -p meta&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>03prodigal.sh
+nohup<span class="w"> </span>bash<span class="w"> </span>03prodigal.sh<span class="w"> </span><span class="p">&amp;</span>
+</code></pre></div>
+<h3 id="04">04 去重<a class="headerlink" href="#04" title="Permanent link">&para;</a></h3>
+<p>为了加快后续计算速度，这里用cd-hit对核酸序列进行去重复</p>
+<ul>
+<li>Cd-hit</li>
+</ul>
+<div class="highlight"><pre><span></span><code>cd-hit-est<span class="w"> </span>-i<span class="w"> </span>all_406.cds.fna<span class="w"> </span>-o<span class="w"> </span>all_406.cds.cdhit.fna<span class="w"> </span>-c<span class="w"> </span><span class="m">0</span>.95<span class="w"> </span>-aS<span class="w"> </span><span class="m">0</span>.9<span class="w"> </span>-M<span class="w"> </span><span class="m">10000</span><span class="w"> </span>-T<span class="w"> </span><span class="m">4</span>
+</code></pre></div>
+<h3 id="05">05 基因功能注释<a class="headerlink" href="#05" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>eggnog （<a href="http://eggnog-mapper.embl.de">http://eggnog-mapper.embl.de</a>）</p>
+</li>
+<li>
+<p>KEGG （<a href="https://www.genome.jp/kaas-bin/kaas_main">https://www.genome.jp/kaas-bin/kaas_main</a>）</p>
+</li>
 </ul>
 
 
