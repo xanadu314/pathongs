@@ -12,23 +12,27 @@
         <meta name="author" content="xanadu314">
       
       
-        <link rel="canonical" href="https://xanadu314.github.io/pathongs/book/C15_Phylogeny-Analysis/04_beast2/">
+        <link rel="canonical" href="https://xanadu314.github.io/pathongs/blog/genome/">
       
       
+        <link rel="prev" href="../software/">
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      
+        <link rel="next" href="../../about/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
       
-        <title>Beast2 使用 - HYX's Bioinformatics</title>
+        <title>11 微生物比较基因组 - HYX's Bioinformatics</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -44,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#beast2" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -85,7 +89,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="HYX&#39;s Bioinformatics" class="md-header__button md-logo" aria-label="HYX's Bioinformatics" data-md-component="logo">
+    <a href="../.." title="HYX&#39;s Bioinformatics" class="md-header__button md-logo" aria-label="HYX's Bioinformatics" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -104,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Beast2 使用
+              11 微生物比较基因组
             
           </span>
         </div>
@@ -181,7 +185,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../.." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       首页
     </a>
   </li>
@@ -196,7 +200,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../main/" class="md-tabs__link">
+      <a href="../../book/main/" class="md-tabs__link">
         数据分析笔记
       </a>
     </li>
@@ -217,7 +221,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../tutorial/Linux/01_linux-installation/" class="md-tabs__link">
+      <a href="../../tutorial/Linux/01_linux-installation/" class="md-tabs__link">
         专项教程
       </a>
     </li>
@@ -235,7 +239,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../protocol/artic-network-covid19/" class="md-tabs__link">
+      <a href="../../protocol/artic-network-covid19/" class="md-tabs__link">
         博文日志
       </a>
     </li>
@@ -245,13 +249,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../blog/my-vim-ide/" class="md-tabs__link">
+      <a href="../my-vim-ide/" class="md-tabs__link md-tabs__link--active">
         生信笔记
       </a>
     </li>
@@ -267,7 +273,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link">
         关于我们
       </a>
     </li>
@@ -295,7 +301,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="HYX&#39;s Bioinformatics" class="md-nav__button md-logo" aria-label="HYX's Bioinformatics" data-md-component="logo">
+    <a href="../.." title="HYX&#39;s Bioinformatics" class="md-nav__button md-logo" aria-label="HYX's Bioinformatics" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -326,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         首页
       </a>
     </li>
@@ -368,7 +374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../main/" class="md-nav__link">
+      <a href="../../book/main/" class="md-nav__link">
         第零章 开始之前
       </a>
     </li>
@@ -411,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C01_Common-Utility/01_database/" class="md-nav__link">
+      <a href="../../book/C01_Common-Utility/01_database/" class="md-nav__link">
         01. 基因组公共数据库
       </a>
     </li>
@@ -425,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C01_Common-Utility/02_get-data/" class="md-nav__link">
+      <a href="../../book/C01_Common-Utility/02_get-data/" class="md-nav__link">
         02. 下载基因组数据
       </a>
     </li>
@@ -439,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C01_Common-Utility/03_entrez/" class="md-nav__link">
+      <a href="../../book/C01_Common-Utility/03_entrez/" class="md-nav__link">
         03. Entrez 工具
       </a>
     </li>
@@ -453,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C01_Common-Utility/04_emboss/" class="md-nav__link">
+      <a href="../../book/C01_Common-Utility/04_emboss/" class="md-nav__link">
         04. EMBOSS 工具集
       </a>
     </li>
@@ -467,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C01_Common-Utility/05_blast/" class="md-nav__link">
+      <a href="../../book/C01_Common-Utility/05_blast/" class="md-nav__link">
         05. Blast 比对
       </a>
     </li>
@@ -481,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C01_Common-Utility/06_fastqc/" class="md-nav__link">
+      <a href="../../book/C01_Common-Utility/06_fastqc/" class="md-nav__link">
         06. FastQC
       </a>
     </li>
@@ -495,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C01_Common-Utility/07_multiqc/" class="md-nav__link">
+      <a href="../../book/C01_Common-Utility/07_multiqc/" class="md-nav__link">
         07. Multiqc
       </a>
     </li>
@@ -509,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C01_Common-Utility/08_seqkit/" class="md-nav__link">
+      <a href="../../book/C01_Common-Utility/08_seqkit/" class="md-nav__link">
         08. SeqKit 工具
       </a>
     </li>
@@ -523,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C01_Common-Utility/09_kmer/" class="md-nav__link">
+      <a href="../../book/C01_Common-Utility/09_kmer/" class="md-nav__link">
         09. Kmer 工具
       </a>
     </li>
@@ -573,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C02_Raw-Data-to-Genome/01_bwa-samtools-pipeline/" class="md-nav__link">
+      <a href="../../book/C02_Raw-Data-to-Genome/01_bwa-samtools-pipeline/" class="md-nav__link">
         01. 基本比对流程
       </a>
     </li>
@@ -587,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C02_Raw-Data-to-Genome/02_quast/" class="md-nav__link">
+      <a href="../../book/C02_Raw-Data-to-Genome/02_quast/" class="md-nav__link">
         02. Quast 验证
       </a>
     </li>
@@ -601,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C02_Raw-Data-to-Genome/03_bacteria-assembly/" class="md-nav__link">
+      <a href="../../book/C02_Raw-Data-to-Genome/03_bacteria-assembly/" class="md-nav__link">
         03. 细菌基因组组装
       </a>
     </li>
@@ -615,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C02_Raw-Data-to-Genome/04_virus-assembly/" class="md-nav__link">
+      <a href="../../book/C02_Raw-Data-to-Genome/04_virus-assembly/" class="md-nav__link">
         04. 病毒基因组组装
       </a>
     </li>
@@ -629,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C02_Raw-Data-to-Genome/05_gatk3/" class="md-nav__link">
+      <a href="../../book/C02_Raw-Data-to-Genome/05_gatk3/" class="md-nav__link">
         05. GATK3
       </a>
     </li>
@@ -643,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C02_Raw-Data-to-Genome/06_gatk4/" class="md-nav__link">
+      <a href="../../book/C02_Raw-Data-to-Genome/06_gatk4/" class="md-nav__link">
         06. GATK4
       </a>
     </li>
@@ -657,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C02_Raw-Data-to-Genome/11_long-noisy-reads-assembly/" class="md-nav__link">
+      <a href="../../book/C02_Raw-Data-to-Genome/11_long-noisy-reads-assembly/" class="md-nav__link">
         11. 长序列比对
       </a>
     </li>
@@ -671,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C02_Raw-Data-to-Genome/12_hybrid-assembly/" class="md-nav__link">
+      <a href="../../book/C02_Raw-Data-to-Genome/12_hybrid-assembly/" class="md-nav__link">
         12. 二代三代混合组装
       </a>
     </li>
@@ -685,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C02_Raw-Data-to-Genome/14_bwa-long-sequence-mapping/" class="md-nav__link">
+      <a href="../../book/C02_Raw-Data-to-Genome/14_bwa-long-sequence-mapping/" class="md-nav__link">
         14. bwa 长序列比对
       </a>
     </li>
@@ -735,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C03_Genome-Annotation/01_prokka/" class="md-nav__link">
+      <a href="../../book/C03_Genome-Annotation/01_prokka/" class="md-nav__link">
         01. Prokka 快速注释
       </a>
     </li>
@@ -749,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C03_Genome-Annotation/02_rast/" class="md-nav__link">
+      <a href="../../book/C03_Genome-Annotation/02_rast/" class="md-nav__link">
         02. 在线注释工具 rast
       </a>
     </li>
@@ -763,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C03_Genome-Annotation/03_pgaap/" class="md-nav__link">
+      <a href="../../book/C03_Genome-Annotation/03_pgaap/" class="md-nav__link">
         03. 注释工具 PGAAP
       </a>
     </li>
@@ -777,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C03_Genome-Annotation/04_snpeff/" class="md-nav__link">
+      <a href="../../book/C03_Genome-Annotation/04_snpeff/" class="md-nav__link">
         04. SNP注释工具 snpEFF
       </a>
     </li>
@@ -791,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C03_Genome-Annotation/05_cog/" class="md-nav__link">
+      <a href="../../book/C03_Genome-Annotation/05_cog/" class="md-nav__link">
         05. COG注释
       </a>
     </li>
@@ -841,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C06_Genome-Compare/01_mummer/" class="md-nav__link">
+      <a href="../../book/C06_Genome-Compare/01_mummer/" class="md-nav__link">
         01. mummer
       </a>
     </li>
@@ -855,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C06_Genome-Compare/02_nucdiff/" class="md-nav__link">
+      <a href="../../book/C06_Genome-Compare/02_nucdiff/" class="md-nav__link">
         02. nucdiff
       </a>
     </li>
@@ -869,7 +875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C06_Genome-Compare/03_mauve/" class="md-nav__link">
+      <a href="../../book/C06_Genome-Compare/03_mauve/" class="md-nav__link">
         03. mauve
       </a>
     </li>
@@ -883,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C06_Genome-Compare/04_sibelia/" class="md-nav__link">
+      <a href="../../book/C06_Genome-Compare/04_sibelia/" class="md-nav__link">
         04. sibelia
       </a>
     </li>
@@ -897,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C06_Genome-Compare/05_ani/" class="md-nav__link">
+      <a href="../../book/C06_Genome-Compare/05_ani/" class="md-nav__link">
         05. ani
       </a>
     </li>
@@ -911,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C06_Genome-Compare/10_bigsi/" class="md-nav__link">
+      <a href="../../book/C06_Genome-Compare/10_bigsi/" class="md-nav__link">
         10. bigsi
       </a>
     </li>
@@ -961,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C07_PanGenome-and-CoreGenome/01_pangenome/" class="md-nav__link">
+      <a href="../../book/C07_PanGenome-and-CoreGenome/01_pangenome/" class="md-nav__link">
         01. Pangenome 概述
       </a>
     </li>
@@ -975,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C07_PanGenome-and-CoreGenome/02_get_homologues/" class="md-nav__link">
+      <a href="../../book/C07_PanGenome-and-CoreGenome/02_get_homologues/" class="md-nav__link">
         02. Get_Homologues 分析
       </a>
     </li>
@@ -989,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C07_PanGenome-and-CoreGenome/03_bpga/" class="md-nav__link">
+      <a href="../../book/C07_PanGenome-and-CoreGenome/03_bpga/" class="md-nav__link">
         03. BPGA 分析
       </a>
     </li>
@@ -1003,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C07_PanGenome-and-CoreGenome/04_roary/" class="md-nav__link">
+      <a href="../../book/C07_PanGenome-and-CoreGenome/04_roary/" class="md-nav__link">
         04. Roary 分析
       </a>
     </li>
@@ -1017,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C07_PanGenome-and-CoreGenome/05_panseq/" class="md-nav__link">
+      <a href="../../book/C07_PanGenome-and-CoreGenome/05_panseq/" class="md-nav__link">
         05. panseq 分析
       </a>
     </li>
@@ -1031,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C07_PanGenome-and-CoreGenome/07_orthmcl/" class="md-nav__link">
+      <a href="../../book/C07_PanGenome-and-CoreGenome/07_orthmcl/" class="md-nav__link">
         07. OrthMCL 分析
       </a>
     </li>
@@ -1045,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C07_PanGenome-and-CoreGenome/08_itep/" class="md-nav__link">
+      <a href="../../book/C07_PanGenome-and-CoreGenome/08_itep/" class="md-nav__link">
         08. ITEP 分析
       </a>
     </li>
@@ -1095,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C08_Genome-Visualization/01_igv/" class="md-nav__link">
+      <a href="../../book/C08_Genome-Visualization/01_igv/" class="md-nav__link">
         01. igv 查看比对结果
       </a>
     </li>
@@ -1109,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C08_Genome-Visualization/02_brig/" class="md-nav__link">
+      <a href="../../book/C08_Genome-Visualization/02_brig/" class="md-nav__link">
         02. BRIG 分析工具
       </a>
     </li>
@@ -1123,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C08_Genome-Visualization/03_circos/" class="md-nav__link">
+      <a href="../../book/C08_Genome-Visualization/03_circos/" class="md-nav__link">
         03. circos 工具使用
       </a>
     </li>
@@ -1173,7 +1179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C09_Analysis-Platform/01_docker/" class="md-nav__link">
+      <a href="../../book/C09_Analysis-Platform/01_docker/" class="md-nav__link">
         01. 基于 docker 镜像
       </a>
     </li>
@@ -1187,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C09_Analysis-Platform/02_galaxy/" class="md-nav__link">
+      <a href="../../book/C09_Analysis-Platform/02_galaxy/" class="md-nav__link">
         02. Galaxy 平台
       </a>
     </li>
@@ -1201,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C09_Analysis-Platform/03_amazon/" class="md-nav__link">
+      <a href="../../book/C09_Analysis-Platform/03_amazon/" class="md-nav__link">
         03. Amazon EC2 云平台
       </a>
     </li>
@@ -1215,7 +1221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C09_Analysis-Platform/04_others/" class="md-nav__link">
+      <a href="../../book/C09_Analysis-Platform/04_others/" class="md-nav__link">
         04. 其他平台
       </a>
     </li>
@@ -1229,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C16_Standalone-Platform/01_anvio/" class="md-nav__link">
+      <a href="../../book/C16_Standalone-Platform/01_anvio/" class="md-nav__link">
         05. anvio
       </a>
     </li>
@@ -1243,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C16_Standalone-Platform/02_galaxy/" class="md-nav__link">
+      <a href="../../book/C16_Standalone-Platform/02_galaxy/" class="md-nav__link">
         02. galaxy
       </a>
     </li>
@@ -1293,7 +1299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C10_Recombination-and-Population-Structure/01_virus-recombination/" class="md-nav__link">
+      <a href="../../book/C10_Recombination-and-Population-Structure/01_virus-recombination/" class="md-nav__link">
         01. 病毒重组
       </a>
     </li>
@@ -1307,7 +1313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C10_Recombination-and-Population-Structure/02_gubbins/" class="md-nav__link">
+      <a href="../../book/C10_Recombination-and-Population-Structure/02_gubbins/" class="md-nav__link">
         02. Gubbins 分析
       </a>
     </li>
@@ -1321,7 +1327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C10_Recombination-and-Population-Structure/03_baps/" class="md-nav__link">
+      <a href="../../book/C10_Recombination-and-Population-Structure/03_baps/" class="md-nav__link">
         03. BAPS
       </a>
     </li>
@@ -1371,7 +1377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C11_Insilico-Scanning/01_srst2/" class="md-nav__link">
+      <a href="../../book/C11_Insilico-Scanning/01_srst2/" class="md-nav__link">
         01. SRST2 短序列扫描工具
       </a>
     </li>
@@ -1385,7 +1391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C11_Insilico-Scanning/02_mlst/" class="md-nav__link">
+      <a href="../../book/C11_Insilico-Scanning/02_mlst/" class="md-nav__link">
         02. MLST 扫描工具
       </a>
     </li>
@@ -1399,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C11_Insilico-Scanning/03_ariba/" class="md-nav__link">
+      <a href="../../book/C11_Insilico-Scanning/03_ariba/" class="md-nav__link">
         03. Ariba 耐药基因
       </a>
     </li>
@@ -1413,7 +1419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C11_Insilico-Scanning/04_abricate/" class="md-nav__link">
+      <a href="../../book/C11_Insilico-Scanning/04_abricate/" class="md-nav__link">
         04. Abricate 多功能扫描工具
       </a>
     </li>
@@ -1463,7 +1469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C12_Metagenomics-Analysis/01_kraken/" class="md-nav__link">
+      <a href="../../book/C12_Metagenomics-Analysis/01_kraken/" class="md-nav__link">
         01. kraken
       </a>
     </li>
@@ -1477,7 +1483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C12_Metagenomics-Analysis/02_centrifuge/" class="md-nav__link">
+      <a href="../../book/C12_Metagenomics-Analysis/02_centrifuge/" class="md-nav__link">
         02. centrifuge
       </a>
     </li>
@@ -1491,7 +1497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C12_Metagenomics-Analysis/03_bracken/" class="md-nav__link">
+      <a href="../../book/C12_Metagenomics-Analysis/03_bracken/" class="md-nav__link">
         03. bracken
       </a>
     </li>
@@ -1505,7 +1511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C12_Metagenomics-Analysis/04_sourmash/" class="md-nav__link">
+      <a href="../../book/C12_Metagenomics-Analysis/04_sourmash/" class="md-nav__link">
         04. sourmash
       </a>
     </li>
@@ -1519,7 +1525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C12_Metagenomics-Analysis/05_clark/" class="md-nav__link">
+      <a href="../../book/C12_Metagenomics-Analysis/05_clark/" class="md-nav__link">
         05. clark
       </a>
     </li>
@@ -1533,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C12_Metagenomics-Analysis/06_krona/" class="md-nav__link">
+      <a href="../../book/C12_Metagenomics-Analysis/06_krona/" class="md-nav__link">
         06. krona
       </a>
     </li>
@@ -1547,7 +1553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C12_Metagenomics-Analysis/07_pavian/" class="md-nav__link">
+      <a href="../../book/C12_Metagenomics-Analysis/07_pavian/" class="md-nav__link">
         07. pavian
       </a>
     </li>
@@ -1561,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C12_Metagenomics-Analysis/08_supri/" class="md-nav__link">
+      <a href="../../book/C12_Metagenomics-Analysis/08_supri/" class="md-nav__link">
         08. supri
       </a>
     </li>
@@ -1575,7 +1581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C12_Metagenomics-Analysis/09_shotgun/" class="md-nav__link">
+      <a href="../../book/C12_Metagenomics-Analysis/09_shotgun/" class="md-nav__link">
         09. shotgun 分析
       </a>
     </li>
@@ -1589,7 +1595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C12_Metagenomics-Analysis/10_16s/" class="md-nav__link">
+      <a href="../../book/C12_Metagenomics-Analysis/10_16s/" class="md-nav__link">
         10. 16S 种群分析
       </a>
     </li>
@@ -1603,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C12_Metagenomics-Analysis/11_kmerfinder/" class="md-nav__link">
+      <a href="../../book/C12_Metagenomics-Analysis/11_kmerfinder/" class="md-nav__link">
         11. KmerFinder
       </a>
     </li>
@@ -1617,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C12_Metagenomics-Analysis/12_meta-beetl/" class="md-nav__link">
+      <a href="../../book/C12_Metagenomics-Analysis/12_meta-beetl/" class="md-nav__link">
         12. Meta-BEETL
       </a>
     </li>
@@ -1667,7 +1673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C13_Single-Molecular-Sequencing/01_nanopore/" class="md-nav__link">
+      <a href="../../book/C13_Single-Molecular-Sequencing/01_nanopore/" class="md-nav__link">
         01. nanopore
       </a>
     </li>
@@ -1681,7 +1687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C13_Single-Molecular-Sequencing/02_pacbio/" class="md-nav__link">
+      <a href="../../book/C13_Single-Molecular-Sequencing/02_pacbio/" class="md-nav__link">
         02. pacbio
       </a>
     </li>
@@ -1695,7 +1701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C13_Single-Molecular-Sequencing/03_canu/" class="md-nav__link">
+      <a href="../../book/C13_Single-Molecular-Sequencing/03_canu/" class="md-nav__link">
         03. canu
       </a>
     </li>
@@ -1709,7 +1715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C13_Single-Molecular-Sequencing/04_seqs-polish/" class="md-nav__link">
+      <a href="../../book/C13_Single-Molecular-Sequencing/04_seqs-polish/" class="md-nav__link">
         04. trimming
       </a>
     </li>
@@ -1723,7 +1729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C13_Single-Molecular-Sequencing/06_hybrid-assembling/" class="md-nav__link">
+      <a href="../../book/C13_Single-Molecular-Sequencing/06_hybrid-assembling/" class="md-nav__link">
         06. hybrid
       </a>
     </li>
@@ -1773,7 +1779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C14_Multiple-Sequence-Alignment/01_msa/" class="md-nav__link">
+      <a href="../../book/C14_Multiple-Sequence-Alignment/01_msa/" class="md-nav__link">
         01. 多重序列比对
       </a>
     </li>
@@ -1823,7 +1829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00_all-about-phylogeny/" class="md-nav__link">
+      <a href="../../book/C15_Phylogeny-Analysis/00_all-about-phylogeny/" class="md-nav__link">
         00. 构建进化书
       </a>
     </li>
@@ -1837,7 +1843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_raxml.md" class="md-nav__link">
+      <a href="../../book/C15_Phylogeny-Analysis/02_raxml.md" class="md-nav__link">
         01. RAxML
       </a>
     </li>
@@ -1851,7 +1857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_figtree.md" class="md-nav__link">
+      <a href="../../book/C15_Phylogeny-Analysis/01_figtree.md" class="md-nav__link">
         02. figtree
       </a>
     </li>
@@ -1865,7 +1871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_ggtree.md" class="md-nav__link">
+      <a href="../../book/C15_Phylogeny-Analysis/02_ggtree.md" class="md-nav__link">
         03. ggtree
       </a>
     </li>
@@ -1915,7 +1921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C17_Pathogen-Geospatial-Analysis/04_cartodb/" class="md-nav__link">
+      <a href="../../book/C17_Pathogen-Geospatial-Analysis/04_cartodb/" class="md-nav__link">
         04. CartoDB
       </a>
     </li>
@@ -1929,7 +1935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C17_Pathogen-Geospatial-Analysis/05_leaflet/" class="md-nav__link">
+      <a href="../../book/C17_Pathogen-Geospatial-Analysis/05_leaflet/" class="md-nav__link">
         05. leaflet
       </a>
     </li>
@@ -1979,7 +1985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C18_Analysis-Examples/01_trace-Pae-from-different-source-by-SNP/" class="md-nav__link">
+      <a href="../../book/C18_Analysis-Examples/01_trace-Pae-from-different-source-by-SNP/" class="md-nav__link">
         01. 细菌SNP溯源分析一
       </a>
     </li>
@@ -1993,7 +1999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C18_Analysis-Examples/02_comparative-analysis-Ban-genomes/" class="md-nav__link">
+      <a href="../../book/C18_Analysis-Examples/02_comparative-analysis-Ban-genomes/" class="md-nav__link">
         02. 细菌比较基因组学研究
       </a>
     </li>
@@ -2043,7 +2049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C19_Pipelines-and-Workflows/05_workflow-software/" class="md-nav__link">
+      <a href="../../book/C19_Pipelines-and-Workflows/05_workflow-software/" class="md-nav__link">
         05. workflow工具软件
       </a>
     </li>
@@ -2093,7 +2099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../C20_Others/02_gi-to-accession/" class="md-nav__link">
+      <a href="../../book/C20_Others/02_gi-to-accession/" class="md-nav__link">
         02. GI转Accession
       </a>
     </li>
@@ -2178,7 +2184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Linux/01_linux-installation/" class="md-nav__link">
+      <a href="../../tutorial/Linux/01_linux-installation/" class="md-nav__link">
         01. Linux 安装示例
       </a>
     </li>
@@ -2192,7 +2198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Linux/02_basic-cml/" class="md-nav__link">
+      <a href="../../tutorial/Linux/02_basic-cml/" class="md-nav__link">
         02. Linux 基本命令
       </a>
     </li>
@@ -2206,7 +2212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Linux/03_linux-software/" class="md-nav__link">
+      <a href="../../tutorial/Linux/03_linux-software/" class="md-nav__link">
         03. Linux 软件管理
       </a>
     </li>
@@ -2220,7 +2226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Linux/04_awk/" class="md-nav__link">
+      <a href="../../tutorial/Linux/04_awk/" class="md-nav__link">
         04. awk 列处理工具
       </a>
     </li>
@@ -2234,7 +2240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Linux/05_sed/" class="md-nav__link">
+      <a href="../../tutorial/Linux/05_sed/" class="md-nav__link">
         05. sed 行处理工具
       </a>
     </li>
@@ -2248,7 +2254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Linux/06_tools/" class="md-nav__link">
+      <a href="../../tutorial/Linux/06_tools/" class="md-nav__link">
         06. 其他命令行工具
       </a>
     </li>
@@ -2262,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Linux/07_vim/" class="md-nav__link">
+      <a href="../../tutorial/Linux/07_vim/" class="md-nav__link">
         07. vim
       </a>
     </li>
@@ -2312,7 +2318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Programming/01_shell/" class="md-nav__link">
+      <a href="../../tutorial/Programming/01_shell/" class="md-nav__link">
         01. Shell 脚本
       </a>
     </li>
@@ -2326,7 +2332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Programming/02_perl/" class="md-nav__link">
+      <a href="../../tutorial/Programming/02_perl/" class="md-nav__link">
         02. Perl 编程
       </a>
     </li>
@@ -2340,7 +2346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Programming/03_python/" class="md-nav__link">
+      <a href="../../tutorial/Programming/03_python/" class="md-nav__link">
         03. Python 编程
       </a>
     </li>
@@ -2354,7 +2360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Programming/04_biopython/" class="md-nav__link">
+      <a href="../../tutorial/Programming/04_biopython/" class="md-nav__link">
         04. Biopython 编程
       </a>
     </li>
@@ -2368,7 +2374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Programming/05_r/" class="md-nav__link">
+      <a href="../../tutorial/Programming/05_r/" class="md-nav__link">
         05. R 编程
       </a>
     </li>
@@ -2418,7 +2424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Format/01_fasta/" class="md-nav__link">
+      <a href="../../tutorial/Format/01_fasta/" class="md-nav__link">
         01. fasta
       </a>
     </li>
@@ -2432,7 +2438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Format/02_embl/" class="md-nav__link">
+      <a href="../../tutorial/Format/02_embl/" class="md-nav__link">
         02. embl
       </a>
     </li>
@@ -2446,7 +2452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Format/05_fastq.md" class="md-nav__link">
+      <a href="../../tutorial/Format/05_fastq.md" class="md-nav__link">
         03. fastq
       </a>
     </li>
@@ -2460,7 +2466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Format/04_gcg/" class="md-nav__link">
+      <a href="../../tutorial/Format/04_gcg/" class="md-nav__link">
         04. gcg
       </a>
     </li>
@@ -2474,7 +2480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Format/05_sam/" class="md-nav__link">
+      <a href="../../tutorial/Format/05_sam/" class="md-nav__link">
         05. sam
       </a>
     </li>
@@ -2488,7 +2494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Format/06_bam/" class="md-nav__link">
+      <a href="../../tutorial/Format/06_bam/" class="md-nav__link">
         06. bam
       </a>
     </li>
@@ -2502,7 +2508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Format/07_bed/" class="md-nav__link">
+      <a href="../../tutorial/Format/07_bed/" class="md-nav__link">
         07. bed
       </a>
     </li>
@@ -2516,7 +2522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Format/08_vcf/" class="md-nav__link">
+      <a href="../../tutorial/Format/08_vcf/" class="md-nav__link">
         08. vcf
       </a>
     </li>
@@ -2530,7 +2536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Format/09_gff/" class="md-nav__link">
+      <a href="../../tutorial/Format/09_gff/" class="md-nav__link">
         09. gff
       </a>
     </li>
@@ -2544,7 +2550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/Format/10_cram/" class="md-nav__link">
+      <a href="../../tutorial/Format/10_cram/" class="md-nav__link">
         10. cram
       </a>
     </li>
@@ -2600,7 +2606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../protocol/artic-network-covid19/" class="md-nav__link">
+      <a href="../../protocol/artic-network-covid19/" class="md-nav__link">
         Article
       </a>
     </li>
@@ -2614,7 +2620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../protocol/yihuixie/" class="md-nav__link">
+      <a href="../../protocol/yihuixie/" class="md-nav__link">
         答谢博书
       </a>
     </li>
@@ -2628,7 +2634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../protocol/lsx/" class="md-nav__link">
+      <a href="../../protocol/lsx/" class="md-nav__link">
         生日祝福
       </a>
     </li>
@@ -2648,14 +2654,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -2664,7 +2672,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           生信笔记
@@ -2677,7 +2685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/my-vim-ide/" class="md-nav__link">
+      <a href="../my-vim-ide/" class="md-nav__link">
         01 TEST
       </a>
     </li>
@@ -2691,7 +2699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/blast2sra/" class="md-nav__link">
+      <a href="../blast2sra/" class="md-nav__link">
         02 blast2SRA
       </a>
     </li>
@@ -2705,7 +2713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/tes/" class="md-nav__link">
+      <a href="../tes/" class="md-nav__link">
         03 Rmarkdown
       </a>
     </li>
@@ -2719,7 +2727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/test0316/" class="md-nav__link">
+      <a href="../test0316/" class="md-nav__link">
         04 SPAdes
       </a>
     </li>
@@ -2733,7 +2741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/KEGG/" class="md-nav__link">
+      <a href="../KEGG/" class="md-nav__link">
         05 KEGG注释
       </a>
     </li>
@@ -2747,7 +2755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/SourceSink/" class="md-nav__link">
+      <a href="../SourceSink/" class="md-nav__link">
         06 SourceSink分析
       </a>
     </li>
@@ -2761,7 +2769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/tes2/" class="md-nav__link">
+      <a href="../tes2/" class="md-nav__link">
         07 小鼠转录组分析模板
       </a>
     </li>
@@ -2775,7 +2783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/test0316/" class="md-nav__link">
+      <a href="../test0316/" class="md-nav__link">
         08 真菌基因组
       </a>
     </li>
@@ -2789,7 +2797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/mNGS/" class="md-nav__link">
+      <a href="../mNGS/" class="md-nav__link">
         09 mNGS
       </a>
     </li>
@@ -2803,7 +2811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/software/" class="md-nav__link">
+      <a href="../software/" class="md-nav__link">
         10 软件安装
       </a>
     </li>
@@ -2815,11 +2823,113 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../blog/genome/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          11 微生物比较基因组
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         11 微生物比较基因组
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    思维导图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qc" class="md-nav__link">
+    质控QC
+  </a>
+  
+    <nav class="md-nav" aria-label="质控QC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    第一次质控
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    整合第一次质控结果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    第二次质控
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    整合第二次质控结果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembly" class="md-nav__link">
+    组装Assembly
+  </a>
+  
+    <nav class="md-nav" aria-label="组装Assembly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    组装后的质控
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2866,7 +2976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
       </a>
     </li>
@@ -2907,9 +3017,70 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    安装
+  <a href="#_2" class="md-nav__link">
+    思维导图
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qc" class="md-nav__link">
+    质控QC
+  </a>
+  
+    <nav class="md-nav" aria-label="质控QC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    第一次质控
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    整合第一次质控结果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    第二次质控
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    整合第二次质控结果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembly" class="md-nav__link">
+    组装Assembly
+  </a>
+  
+    <nav class="md-nav" aria-label="组装Assembly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    组装后的质控
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2928,17 +3099,88 @@
                   
 
 
-<h1 id="beast2">Beast2 使用<a class="headerlink" href="#beast2" title="Permanent link">&para;</a></h1>
-<h2 id="_1">安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># 创建 beast2 虚拟环境，安装 beast2</span>
-$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>beast2
-$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>beast2
-<span class="o">(</span>beast2<span class="o">)</span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>beast2
-
-<span class="c1"># 向conda环境添加变量，优化 java 对 beauti 程序字体渲染</span>
-<span class="o">(</span>beast2<span class="o">)</span>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export _JAVA_OPTIONS=&#39;-Dawt.useSystemAAFontSettings=lcd&#39;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$CONDA_PREFIX</span>/etc/conda/activate.d/java_home.sh
-<span class="o">(</span>beast2<span class="o">)</span>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;unset _JAVA_OPTIONS&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$CONDA_PREFIX</span>/etc/conda/deactivate.d/java_home.sh
+<h1 id="_1">微生物比较基因组学<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>**2024.11.9</p>
+<h2 id="_2">思维导图<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>flowchart TD
+    A[Rawdata] --fastp去除adapter,duplication--&gt; B{Cleandata}
+    B -- Snippy --&gt; C[VCF]
+    B -- Spades组装 --&gt; D[Scaffolds]
+    D -- quast,busco --&gt;H[QC data]
+    C --GWAS--&gt; F[Final Results]
+    D --prokka注释--&gt; E[基因/功能基因组]
+    E --kaptive--&gt; G[分型]
+    E --roary--&gt; I[pan-genome]
+    I --scoary GWAS--&gt;F
+    E --pyseer GWAS--&gt;F
+    G --&gt;F[Final Results]
 </code></pre></div>
+<p>[<img alt="" src="https://mermaid.ink/img/pako:eNpdkb1OwzAUhV_F8pyIPQNSmzSlIw2CwelwSZw2amIbx6GKqk78qkjsCIkiwcDORsXjBNq3wG4qUdWTr893rs-1pzjiMcUOTjI-iUYgFTrxQob0apE-TGJQMEC2nUChRP24XD-9QwxCUWnFpcjSCFTKmW0fovbUzSgwY5g1DdrahwKWClEhQ7jk1PUHu5qAmBa_y-vV282G8EgQQZLwLC62nGe4i1Lfbp2XRcQNdkSOXbQJ1jCuPuyetQLTwSd-yiBDfVqUmdrtIiQfj-Hn82N9Nzdkh9SLr_r59aCeL1ZX302hs2wtHW0Z60HTS2roLqnvb-uXhx1VcpCV0XpEALOHlPGcbvWe1nVaDaBtMv_fKKqCUrkndM1k--mxhXMqc0hj_UNTA4ZYjWhOQ-zobUwT0FyIQzbTKJSKBxWLsKNkSS0seTkcYSeBrNBVKfSTUS-FoYS8QWZ_aAivRQ?type=png" /></p>
+<h2 id="qc">质控QC<a class="headerlink" href="#qc" title="Permanent link">&para;</a></h2>
+<ul>
+<li>fastp（去除低质量序列，去除重复序列）</li>
+<li>Multiqc (整合多个质控结果）</li>
+</ul>
+<h3 id="_3">第一次质控<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># -i 输入序列R1</span>
+<span class="c1"># -I 输入序列R2</span>
+<span class="c1"># -o 输出序列R1</span>
+<span class="c1"># -O 输出序列R2</span>
+<span class="c1"># --dedup 进行去重复操作</span>
+<span class="c1"># -w 8 线程数</span>
+<span class="c1"># -j 输出json格式的报告</span>
+<span class="c1"># -h 输出网页格式的报告</span>
+fastp<span class="w"> </span>-i<span class="w"> </span>L1EHH1600255--RJ1450.R1.raw.fastq.gz<span class="w"> </span>-I<span class="w"> </span>L1EHH1600255--RJ1450.R2.raw.fastq.gz<span class="w"> </span>-o<span class="w"> </span>./cleandata/L1EHH1600255--RJ1450.R1.clean.fastq.gz<span class="w"> </span>-O<span class="w"> </span>./cleandata/L1EHH1600255--RJ1450.R2.clean.fastq.gz<span class="w"> </span>--dedup<span class="w"> </span>-w<span class="w"> </span><span class="m">8</span><span class="w"> </span>-j<span class="w"> </span>./cleandata/L1EHH1600255--RJ1450.fastp.json<span class="w"> </span>-h<span class="w"> </span>./cleandata/L1EHH1600255--RJ1450.fastp.html<span class="w"> </span>
+
+<span class="c1"># 写一个循环批量运行</span>
+<span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>id
+<span class="k">do</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;fastp -i </span><span class="si">${</span><span class="nv">id</span><span class="si">}</span><span class="s2">.R1.raw.fastq.gz -I </span><span class="si">${</span><span class="nv">id</span><span class="si">}</span><span class="s2">.R2.raw.fastq.gz -o ./cleandata/</span><span class="si">${</span><span class="nv">id</span><span class="si">}</span><span class="s2">.R1.clean.fastq.gz -O ./cleandata/</span><span class="si">${</span><span class="nv">id</span><span class="si">}</span><span class="s2">.R2.clean.fastq.gz --dedup -w 8 -j ./cleandata/</span><span class="si">${</span><span class="nv">id</span><span class="si">}</span><span class="s2">.fastp.json -h ./cleandata/</span><span class="si">${</span><span class="nv">id</span><span class="si">}</span><span class="s2">.fastp.html &quot;</span>
+<span class="k">done</span>&lt;id.txt<span class="w"> </span>&gt;<span class="w"> </span><span class="m">01</span>.fastp.sh
+nohup<span class="w"> </span>bash<span class="w"> </span><span class="m">01</span>.fastp.sh<span class="w"> </span><span class="p">&amp;</span>
+</code></pre></div>
+<h3 id="_4">整合第一次质控结果<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>multiqc<span class="w"> </span>./
+</code></pre></div>
+<h3 id="_5">第二次质控<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>fastp<span class="w"> </span>-i<span class="w"> </span>L1EHH1600255--RJ1450.R1.clean.fastq.gz<span class="w"> </span>-I<span class="w"> </span>L1EHH1600255--RJ1450.R2.clean.fastq.gz<span class="w"> </span>-Q<span class="w"> </span>-h<span class="w"> </span>./cleandata2/L1EHH1600255--RJ1450.fastp.html<span class="w"> </span>-j<span class="w"> </span>./cleandata2/L1EHH1600255--RJ1450.fastp.json<span class="w"> </span>-w<span class="w"> </span><span class="m">8</span><span class="w"> </span>
+<span class="c1"># 写一个循环批量运行</span>
+<span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>id
+<span class="k">do</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;fastp -i </span><span class="si">${</span><span class="nv">id</span><span class="si">}</span><span class="s2">.R1.clean.fastq.gz -I </span><span class="si">${</span><span class="nv">id</span><span class="si">}</span><span class="s2">.R2.clean.fastq.gz -Q -w 8 -j ./cleandata2/</span><span class="si">${</span><span class="nv">id</span><span class="si">}</span><span class="s2">.fastp.json -h ./cleandata2/</span><span class="si">${</span><span class="nv">id</span><span class="si">}</span><span class="s2">.fastp.html &quot;</span>
+<span class="k">done</span>&lt;id.txt<span class="w"> </span>&gt;<span class="w"> </span><span class="m">02</span>.fastp.stats.sh
+nohup<span class="w"> </span>bash<span class="w"> </span><span class="m">02</span>.fastp.stats.sh<span class="w"> </span><span class="p">&amp;</span>
+</code></pre></div>
+<h3 id="_6">整合第二次质控结果<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>multiqc ./
+</code></pre></div>
+<h2 id="assembly">组装Assembly<a class="headerlink" href="#assembly" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># --careful 仔细地组装</span>
+<span class="c1"># -1 质控后的R1</span>
+<span class="c1"># -2 质控后的R2</span>
+<span class="c1"># -t 12 线程数为12</span>
+<span class="c1"># -o 输出目录（指定文件夹名称）</span>
+spades.py<span class="w"> </span>--careful<span class="w"> </span>-1<span class="w"> </span>L1EHH1600255--RJ1450.R1.clean.fastq.gz<span class="w"> </span>-2<span class="w"> </span>L1EHH1600255--RJ1450.R2.clean.fastq.gz<span class="w"> </span>-t<span class="w"> </span><span class="m">12</span><span class="w"> </span>-o<span class="w"> </span>03assembly/RJ1450
+<span class="c1"># 写一个循环批量运行</span>
+<span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>id1<span class="w"> </span>id2
+<span class="k">do</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;spades.py --careful -1 </span><span class="si">${</span><span class="nv">id1</span><span class="si">}</span><span class="s2">.R1.clean.fastq.gz -2 </span><span class="si">${</span><span class="nv">id1</span><span class="si">}</span><span class="s2">.R2.clean.fastq.gz -t 12 -o 03assembly/</span><span class="si">${</span><span class="nv">id2</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">done</span>&lt;id12.txt<span class="w"> </span>&gt;<span class="w"> </span><span class="m">03</span>.spades.sh
+nohup<span class="w"> </span>bash<span class="w"> </span><span class="m">03</span>.spades.sh<span class="p">&amp;</span>
+
+<span class="c1">## !!组装后记得改文件名!!</span>
+find<span class="w"> </span>-maxdepth<span class="w"> </span><span class="m">2</span><span class="w"> </span>-name<span class="w"> </span>scaffolds.fasta<span class="w"> </span>&gt;<span class="w"> </span>id1.txt<span class="w"> </span><span class="c1">#找到文件路径</span>
+cat<span class="w"> </span>id1.txt<span class="w"> </span><span class="p">|</span>cut<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;/&quot;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">2</span><span class="w"> </span>&gt;<span class="w"> </span>id2.txt<span class="w"> </span><span class="c1">#提取文件名</span>
+paste<span class="w"> </span>id1.txt<span class="w"> </span>id2.txt<span class="w"> </span>&gt;<span class="w"> </span>id12.txt<span class="w"> </span><span class="c1">#生成文件路径和文件名的对应表格</span>
+<span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>id1<span class="w"> </span>id2<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>cp<span class="w"> </span><span class="si">${</span><span class="nv">id1</span><span class="si">}</span><span class="w"> </span>./<span class="si">${</span><span class="nv">id2</span><span class="si">}</span>/<span class="si">${</span><span class="nv">id2</span><span class="si">}</span>.fasta<span class="p">;</span><span class="w"> </span><span class="k">done</span>&lt;id12.txt<span class="w"> </span><span class="c1">#生成新的文件</span>
+<span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>id<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/&gt;/&gt;${id}_/g&#39;</span><span class="w"> </span>./<span class="si">${</span><span class="nv">id</span><span class="si">}</span>/<span class="si">${</span><span class="nv">id</span><span class="si">}</span>.fasta<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">done</span>&lt;id2.txt<span class="w">  </span><span class="c1">#修改文件内容</span>
+</code></pre></div>
+<h3 id="_7">组装后的质控<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>CheckM 用来评估完整性和污染度</li>
+<li>Quast 评估基因组组装的连续性和一致性</li>
+<li>Busco 评估基因组中功能性基因的保守性和完整性</li>
+</ul>
 
 
 
@@ -2980,13 +3222,13 @@ $<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> <
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b425cdc4.min.js"></script>
       
         
-          <script src="../../../javascripts/config.js"></script>
+          <script src="../../javascripts/config.js"></script>
         
       
         
